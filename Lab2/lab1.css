@@ -1,0 +1,23 @@
+html {
+	background-color: #333;
+	color: white;
+	word-spacing: 5px;
+}
+
+
+#nombre {
+	color: #999;
+}
+
+.answer-input {
+	background-color: #00000000;
+	border: none;
+	color: white;
+	padding: .5em 1em .5em 0;
+}
+
+.answer-input:focus {
+	outline: none;
+	background-color: #fff;
+	color: #333;
+}
