@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab6 - A01702056</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="container">
+
+
+		<div class="pregunta row my-2">
+			<h3>Ejercicio1</h3>
+			<p>Tu constraseña debe de tener:</p>
+			<ul>
+				<li>Mínimo 8 caracteres</li>
+				<li>Contener al menos una mayúscula</li>
+				<li>Contener al menos una minúscula</li>
+			</ul>
+			<form id="submit-ejercicio1" class="row">
+				<input type="password" name="pass1" id="pass1" placeholder="Contraseña" class="col m-2">
+				<input type="password" name="pass2" id="pass2" placeholder="Validar contraseña" class="col m-2">
+				<input type="submit" value="Comprobar" class="btn btn-success text-white" class="col">
+			</form>
+		</div>
+
+
+		<div class="pregunta row my-2">
+			<h3>Ejercicio2</h3>
+
+
+				<div class="card col mx-2">
+					<!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+					<div class="card-body">
+						<h5 class="card-title">Pizza</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Pepperonni / Mexicana / Mooshrooms</h6>
+						<p class="card-text">
+							Esta es de las mejores pizzas con las que se puede contar. Ideal para alguna cena familiar o reunion con los amigos
+						</p>
+						<p><span>$</span><span id="precio-pizza">200</span></p>
+						<a href="#" class="btn btn-primary add" data-id="pizza">Agregar al carrito</a>
+						<p>
+							<span>Precio : </span>
+							<span class="cantidad" id="pizza">0</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="card col mx-2">
+					<!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+					<div class="card-body">
+						<h5 class="card-title">Tacos</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Pastor / Tripa / Campechanos</h6>
+						<p class="card-text">Uffff. Pues son tacos, qué más puedo decir</p>
+						<p><span>$</span><span id="precio-tacos">30</span></p>
+						<a href="#" class="btn btn-primary add" data-id="tacos">Agregar al carrito</a>
+						<p>
+							<span>Precio : </span>
+							<span class="cantidad" id="tacos">0</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="card col mx-2">
+					<!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+					<div class="card-body">
+						<h5 class="card-title">Pozole</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Verde / Balnco / Rojo</h6>
+						<p class="card-text">
+							Parte de la gastronomía más icónica de México. Y al igual que este hermoso país, viene en 3 colores
+						</p>
+						<p><span>$</span><span id="precio-pozole">50</span></p>
+						<a href="#" class="btn btn-primary add" data-id="pozole">Agregar al carrito</a>
+						<p>
+							<span>Precio : </span>
+							<span class="cantidad" id="pozole">0</span>
+						</p>
+					</div>
+				</div>
+		</div>
+
+		<div class="row">
+			Costo : $<span id="raw-price">0</span> <br>
+			IVA: $<span id="iva-price">0</span> <br>
+			Costo total: $<span id="total-price">0</span>
+		</div>
+
+
+	</div>
+</body>
+</html>
