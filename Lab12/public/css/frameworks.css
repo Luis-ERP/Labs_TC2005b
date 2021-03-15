@@ -1,0 +1,58 @@
+h1 {
+    margin-top: 1em;
+    padding-top: 1em;
+    color: rgb(54, 199, 54);
+    font-size: 30px;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    background: url(dogs.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.product {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid rgb(54, 199, 54);
+    border-radius: 60px;
+}
+
+.product h3, p{
+    text-align: center;
+}
+
+input[type="number"]{
+    margin-left: 3em;
+    margin-bottom: 10px;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: text;
+}
+
+button {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: cadetblue;
+}
