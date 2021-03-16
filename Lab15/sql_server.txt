@@ -1,0 +1,70 @@
+//Tabla Materiales
+create table Materiales(
+Clave numeric(5),
+Desccripcion varchar(50),
+Costo numeric(8,2)
+)
+
+
+//Tabla Provedores
+create table Provedores(
+RFC varchar(12),
+Razon_Social varchar(50),
+)
+
+
+//Tabla Proyectos
+create table Proyectos(
+Numero numeric(5),
+Denominacion varchar(50),
+)
+
+
+//Tabla Entregan
+create table Entregan(
+Clave numeric(5),
+RFC varchar(12),
+Numero numeric(5),
+Fecha datetime,
+Cantidad numeric(8,2),
+)
+
+
+//Cargar datos
+BULK INSERT a1701370.a1701370.[Materiales]
+   FROM 'e:\wwwroot\rcortese\materiales.csv'
+   WITH
+      (
+         CODEPAGE = 'ACP',
+         FIELDTERMINATOR = ',',
+         ROWTERMINATOR = '\n'
+      )
+
+BULK INSERT a1701370.a1701370.[Proyectos]
+   FROM 'e:\wwwroot\rcortese\proyectos.csv'
+   WITH
+      (
+         CODEPAGE = 'ACP',
+         FIELDTERMINATOR = ',',
+         ROWTERMINATOR = '\n'
+      )
+
+BULK INSERT a1701370.a1701370.[Provedores]
+   FROM 'e:\wwwroot\rcortese\proveedores.csv'
+   WITH
+      (
+         CODEPAGE = 'ACP',
+         FIELDTERMINATOR = ',',
+         ROWTERMINATOR = '\n'
+      )
+
+SET DATEFORMAT dmy
+
+BULK INSERT a1701370.a1701370.[Entregan]
+   FROM 'e:\wwwroot\rcortese\entregan.csv'
+   WITH
+      (
+         CODEPAGE = 'ACP',
+         FIELDTERMINATOR = ',',
+         ROWTERMINATOR = '\n'
+      )
