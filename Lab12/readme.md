@@ -1,1 +1,1 @@
-Laboratorio realizado colaborativamente por Daniel Cruz Arciniega A01701370 Edgar Ramírez Pérez A01702056
+Laboratorio realizado colaborativamente por Daniel Cruz Arciniega A01701370 y Edgar Ramírez Pérez A01702056
