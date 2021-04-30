@@ -1,0 +1,16 @@
+<h1>
+	<%= titulo %>
+</h1>
+<ul>
+	<% for( let i = 0; i < data.length; i++ ) { %>
+		<li>
+			<span><%- data[i] %> </span>
+		</li>
+	<% } %>
+</ul>
+
+<h4>New entrance</h4>
+<form action="/rutas1/new-model" method="POST">
+	<input type="text" name="nombre">
+	<input type="submit" value="POST new entrance">
+</form>

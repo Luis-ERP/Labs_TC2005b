@@ -1,0 +1,46 @@
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. 
+¿Cuál es? 
+2 registros con el mismo id 1000
+
+¿A qué se debe?
+La tabla Materiales no tiene primary key
+
+¿Qué ocurrió?
+SQL lanzó error por falta de unicidad.
+
+¿Qué información muestra esta consulta?
+Los registros de la tabla Materiales con filtros de tipo, nombre, etc.
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+ALTER TABLE Proveedores ADD constraint llaveProveedores PRIMARY KEY (RFC)
+ALTER TABLE Proyectos ADD constraint llaveProyecto PRIMARY KEY (Numero)
+
+¿Qué sentencias utilizaste para definir este constrait?
+ALTER TABLE Entregan ADD constraint llaveEntregas PRIMARY KEY (Clave, RFC, Numero)
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+Que no existen esos valores en las respectivas tablas que les corresponden. Es decir, que esos valores necesitan existir en las otras tablas para que se puedan relacionar entre ellas dentro de la tabla de Entregan, lo cual no es el caso.
+
+¿Cómo responde el sistema a la inserción de este registro?
+Si es posible y te deja agregarlos, pero no estará cumpliendo la funcionalidad que necesitaremos para relacionar las tablas entre sí. 
+
+¿Qué significa el mensaje que emite el sistema?
+Que no te deja agregar esos datos debido a que no existen tales datos en las demás tablas, exactamente como lo queríamos.
+
+¿Qué significado tiene la sentencia anterior?
+Relaciona las llaves primarias de la tabla Entregan con las llaves primarias de las tablas que les corresponde. Es decir, que hace una unión que referencia a la llave a la que le corresponde el dato para unir correctamente todas las tablas. 
+
+¿Qué significan las columnas de esas consultas?
+Son tanto las llaves foráneas, o bien, primarias de cada tabla.
+
+¿Qué uso se le está dando a GETDATE()?
+Recupera la fecha en la que se hizo la inserción del nuevo registro.
+
+¿Tiene sentido el valor del campo de cantidad?
+No, debido a que un pedido debería tener una cantidad mayor a cero, pues no puedes entregar algo que no existe.
+
+¿Cómo responde el sistema?
+No te deja hacerlo porque marca error
+
+¿Qué significa el mensaje?
+El sistema marca un error debido a que ya le pusimos una restricción y no se permite que se agreguen registros que tengan una cantidad menor o igual a 0.
